@@ -1,0 +1,628 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  #investments {
+    scroll-margin-top:180px; /* Ajusta el valor según la altura de tu navbar/header */
+  }
+  #about{
+    scroll-margin-top: 190px;
+  }
+  #allocation{
+    scroll-margin-top: 180px;
+  }
+  
+  #contact{
+    scroll-margin-top: 210px;
+  }
+  
+  .top-bar {
+    background: rgba(30,30,30,0.8);
+    color: #fff;
+    padding: 6px 30px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    background: transparent;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    gap: 0px; /* Espacio entre logo y menú */
+    transition: background 0.3
+  }
+
+  .navbar.scrolled {
+    background: #000000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+  }
+  
+  .logo img{
+    height: 175px;
+    margin-right: 450px; /* Elimina margen derecho si lo hubiera */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 5px; /* Espacio entre los enlaces */
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    padding: 8px 18px;
+    transition: color 0.2s;
+  }
+  
+  .navbar a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 4px; /* Ajusta la distancia de la línea respecto al texto */
+    transform: translateX(-50%) scaleX(0);
+    width: 70%; /* Ajusta el largo de la línea */
+    height: 4px; /* Grosor de la línea */
+    background: #fff;
+    border-radius: 2px 2px 2px 2px;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  
+  .navbar a:hover::after,
+  .navbar a:focus::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  /*
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 18px;
+    border: 2px solid transparent;
+    transition: border 0.2s, background 0.2s;
+  }
+  
+  
+  .navbar a:hover, .navbar a:focus {
+    border: 2px solid #fff;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+  }
+  */
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('/bitfieldcapital/imagenes/negocio-moderno-edificio-paisaje-tocando-el-cielo.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30,30,30,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.65); /* Ajusta el último valor para más o menos oscuridad */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    color: #fff;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 40px;
+    position: relative;
+  min-height: 35vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .hero-content p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn-focus {
+    background: #1b7b8f;
+    color: #fff;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  
+  .btn-focus:hover {
+    background: #000000;
+  }
+  
+  .about-section {
+    background: #000000; /* Color de fondo oscuro */
+    padding: 80px 0;
+    height: 500px;
+  }
+  
+  .about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .about-left {
+    flex: 1;
+    color: #fff;
+    padding-top: 40px;
+  }
+  
+  .about-left h3 {
+    font-size: 1.2rem;
+    color: #bfc4c9;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  
+  .about-left h1 {
+    font-size: 1.93rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  .about-right {
+    flex: 1.3;
+    background: #252b31;
+    color: #d8dde3;
+    padding: 40px 40px 40px 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  
+  .about-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 32px;
+    color: #fff;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 4px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .about-btn:hover {
+    background: #fff;
+    color: #23282d;
+  }
+
+  .investments-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    margin-bottom: -25px;
+  }
+  
+  .investments-header {
+    text-align: left;
+    margin-bottom: 4.25rem;
+  }
+  
+  .investments-header h3 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  
+  .investments-header h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .section-divider {
+    height: 2px;
+    background: #000;
+    width: 100px;
+    margin: 1rem 0;
+  }
+  
+  .accordion {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 100px;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.2rem 0;
+    font-weight: 700;
+    background: transparent;
+    transition: background 0.2s;
+    font-size: 23px;
+  }
+  
+  .accordion-title:hover {
+    background: #f9f9f9;
+  }
+
+  .investments-header h2 {
+    color: #000000;
+  }
+
+  .investments-header h3 {
+    font-size: 1rem;
+    color: #00717a; /* ¡Aquí aplicas el color! */
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    text-transform: uppercase; /* Opcional, si quieres mayúsculas */
+    letter-spacing: 1px; /* Opcional, para estilo */
+    margin-top: 100px;
+  }
+
+  .accordion-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background: #00717a;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  
+  .accordion-icon::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+  
+  input[type="checkbox"]:checked + .accordion-title .accordion-icon::after {
+    content: '-';
+  }
+  
+  
+  
+  
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked + .accordion-title .accordion-icon::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+    background: #fff;
+    padding: 0;
+  }
+  
+  input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 500px;
+    padding: 1rem 0 1rem 0;
+  }
+  
+
+  
+  .accordion-content {
+    padding: 1rem;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 0; /* Mientras está cerrado, el padding debe ser 0 */
+  }
+  
+  input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 1000px; /* O un valor aún mayor, según tu contenido */
+  padding: 1rem;
+  }
+  
+  
+  .accordion-content p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .parrafos{
+    gap: 30px;
+  }
+
+  .accordion-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem; /* Espacio entre la imagen y el primer párrafo */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .parrafos {
+    display: block;
+    width: 100%;
+  }
+  
+  .parrafos p {
+    margin: 0 0 1.5rem 0; /* Espacio entre párrafos */
+    padding: 0;
+  }
+  
+  .parrafos p:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último párrafo si quieres */
+  }
+
+  .subtitle {
+    color: #444444; /* o #555555, #383838, etc. */
+    font-size: 0.9rem; /* Opcional: hazlo un poco más pequeño */
+ /* Espacio entre el título y el subtítulo */
+    font-weight: normal;
+    margin-top: -18px;
+}
+
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  margin-bottom: 70px;
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-content h3 {
+  margin-top: 70px;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  width: 100%;
+}
+
+.contact-block {
+  min-width: 200px;
+  text-align: left;
+}
+
+.contact-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-block a {
+  color: #222;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+.contact-block div {
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .contact-block {
+    text-align: center;
+  }
+}
+
+.section-subtitle {
+  font-size: 1rem;
+    color: #00717a; /* ¡Aquí aplicas el color! */
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    text-transform: uppercase; /* Opcional, si quieres mayúsculas */
+    letter-spacing: 1px; /* Opcional, para estilo */
+    margin-top: -25px;
+}
+
+.simple-footer {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 250px;
+  background: url('/bitfieldcapital/imagenes/logo\ \(1\).png') no-repeat;
+  background-position: 20% 79%; /* Cambia aquí la posición */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 40px;
+  position: relative;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer-nav a {
+  color: #e0dbce;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-bottom: 3px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.footer-nav a.active,
+.footer-nav a:hover {
+  border-bottom: 2px solid #e0dbce;
+}
+
+.allocation-section {
+  background: #000000;
+  color: #fff;
+  padding: 80px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 730px;
+}
+
+.allocation-subtitle,
+.allocation-title {
+  text-align: left;
+  width: 100%;
+  max-width: 700px;
+  margin-left: 0;
+}
+
+.allocation-title{
+  margin-top: -10px;
+}
+
+.allocation-subtitle {
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+
+  font-size: 1rem;
+    color: #00717a; /* ¡Aquí aplicas el color! */
+    text-transform: uppercase; /* Opcional, si quieres mayúsculas */
+    letter-spacing: 1px;  
+}
+
+.allocation-title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+}
+
+.allocation-image-wrapper {
+  background: #fff;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.7rem;
+}
+
+.allocation-image {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.allocation-caption {
+  color: #7b8a99;
+  font-size: 0.95rem;
+  margin-left: 0px;
+  margin-top: 0.5rem;
+  max-width: 700px;
+  text-align: left
+}
+
+
+
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
