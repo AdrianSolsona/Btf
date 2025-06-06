@@ -108,7 +108,7 @@ body, html {
   .hero-section {
     position: relative;
     height: 100vh;
-    background: url('/bitfieldcapital/imagenes/negocio-moderno-edificio-paisaje-tocando-el-cielo.jpg') center center/cover no-repeat;
+    background: url('negocio-moderno-edificio-paisaje-tocando-el-cielo.jpg') center center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -509,7 +509,7 @@ body, html {
   width: 100%;
   margin: 0 auto;
   min-height: 250px;
-  background: url('/bitfieldcapital/imagenes/logo\ \(1\).png') no-repeat;
+  background: url('logo\ \(1\).png') no-repeat;
   background-position: 20% 79%; /* Cambia aquí la posición */
   background-size: cover;
   display: flex;
